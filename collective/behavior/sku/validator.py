@@ -12,13 +12,13 @@ class ValidateSKUUniqueness(SimpleFieldValidator):
 
     def validate(self, value):
         super(ValidateSKUUniqueness, self).validate(value)
-
-        catalog = getToolByName(self.context, 'portal_catalog')
-        brains = catalog({
-            'sku': value,
-        })
-        if brains:
-            raise Invalid(_(u'The SKU is already in use.'))
+        if getattr(self.context, 'sku', u'') != value:
+            catalog = getToolByName(self.context, 'portal_catalog')
+            brains = catalog({
+                'sku': value,
+            })
+            if brains:
+                raise Invalid(_(u'The SKU is already in use.'))
 
 
 WidgetValidatorDiscriminators(ValidateSKUUniqueness, field=ISKU['sku'])

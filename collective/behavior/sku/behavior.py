@@ -26,8 +26,7 @@ class SKU(object):
         :param value: SKU
         :type value: unicode
         """
-        if value != self.sku:
-            if not isinstance(value, unicode):
-                raise ValueError('Not Unicode')
+        if not isinstance(value, unicode):
+            raise ValueError('Not Unicode')
 
-            setattr(self.context, 'sku', value)
+        setattr(self.context, 'sku', value)
