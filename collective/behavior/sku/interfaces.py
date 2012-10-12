@@ -1,9 +1,9 @@
 from collective.behavior.sku import _
+from plone.directives import form
 from zope import schema
-from zope.interface import Interface
 
 
-class ISKU(Interface):
+class ISKU(form.Schema):
     """Interface for SKU behavior."""
 
     sku = schema.TextLine(

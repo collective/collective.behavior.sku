@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-10-12 12:15+0000\n"
+"POT-Creation-Date: 2012-10-12 18:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,11 @@ msgstr ""
 msgid "SKU"
 msgstr ""
 
+#: ./validator.py:21
+msgid "The SKU is already in use."
+msgstr "SKU on jo käytössä."
+
 #: ./interfaces.py:11
 msgid "Unique ID for Stock Keeping Unit."
-msgstr ""
+msgstr "SKU on uniikki tunnus varastointia varten."
+

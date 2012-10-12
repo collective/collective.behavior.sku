@@ -1,4 +1,3 @@
-from Products.CMFCore.utils import getToolByName
 from collective.behavior.sku.interfaces import ISKU
 from plone.directives import form
 from zope.interface import alsoProvides
@@ -31,7 +30,4 @@ class SKU(object):
             if not isinstance(value, unicode):
                 raise ValueError('Not Unicode')
 
-            catalog = getToolByName(self.context, 'portal_catalog')
-            if not catalog({'sku': value}):
-                setattr(self.context, 'sku', value)
-                self.context.reindexObject()
+            setattr(self.context, 'sku', value)
