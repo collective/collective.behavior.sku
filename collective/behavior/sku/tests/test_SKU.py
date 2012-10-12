@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from collective.behavior.sku.tests.base import IntegrationTestCase
+from zope.lifecycleevent import modified
 
 
 class TestSKU(IntegrationTestCase):
@@ -13,7 +14,6 @@ class TestSKU(IntegrationTestCase):
 
     def create_folder(self):
         from plone.dexterity.utils import createContentInContainer
-        from zope.lifecycleevent import modified
         folder = createContentInContainer(
             self.portal, 'collective.behavior.sku.Folder', id='folder',
             checkConstraints=False, title='Földer', description='Description of Földer.')
@@ -70,6 +70,7 @@ class TestSKU(IntegrationTestCase):
     def test_instance__sku__set__already_exists(self):
         instance1 = self.create_instance()
         instance1.sku = u'SKU1'
+        modified(instance1)
         instance2 = self.create_instance()
         instance2.sku = u'SKU1'
         self.assertEqual(instance2.sku, u'')

@@ -3,7 +3,6 @@ from collective.behavior.sku.interfaces import ISKU
 from plone.directives import form
 from zope.interface import alsoProvides
 from zope.interface import implements
-from zope.lifecycleevent import modified
 
 
 alsoProvides(ISKU, form.IFormFieldProvider)
@@ -35,4 +34,4 @@ class SKU(object):
             catalog = getToolByName(self.context, 'portal_catalog')
             if not catalog({'sku': value}):
                 setattr(self.context, 'sku', value)
-                modified(self.context)
+                self.context.reindexObject()

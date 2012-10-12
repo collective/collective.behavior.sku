@@ -21,4 +21,3 @@ msgstr ""
 #: ./interfaces.py:11
 msgid "Unique ID for Stock Keeping Unit."
 msgstr ""
-
