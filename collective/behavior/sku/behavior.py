@@ -1,0 +1,38 @@
+from Products.CMFCore.utils import getToolByName
+from collective.behavior.sku.interfaces import ISKU
+from plone.directives import form
+from zope.interface import alsoProvides
+from zope.interface import implements
+from zope.lifecycleevent import modified
+
+
+alsoProvides(ISKU, form.IFormFieldProvider)
+
+
+class SKU(object):
+    """
+    """
+    implements(ISKU)
+
+    def __init__(self, context):
+        self.context = context
+
+    @property
+    def sku(self):
+        return getattr(self.context, 'sku', u'')
+
+    @sku.setter
+    def sku(self, value):
+        """Set sku which needs to be unique.
+
+        :param value: SKU
+        :type value: unicode
+        """
+        if value != self.sku:
+            if not isinstance(value, unicode):
+                raise ValueError('Not Unicode')
+
+            catalog = getToolByName(self.context, 'portal_catalog')
+            if not catalog({'sku': value}):
+                setattr(self.context, 'sku', value)
+                modified(self.context)
