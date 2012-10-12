@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-17 08:29+0000\n"
+"POT-Creation-Date: 2012-10-12 12:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,9 @@ msgstr ""
 
 #: ./interfaces.py:10
 msgid "SKU"
-msgstr "Myytävä"
+msgstr ""
 
 #: ./interfaces.py:11
-msgid "Uncheck this if not sku."
-msgstr "Poista, jos ei ole myytävä."
+msgid "Unique ID for Stock Keeping Unit."
+msgstr ""
 
