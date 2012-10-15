@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='collective.behavior.sku',
-    version='0.0',
+    version='0.1',
     description="Behavior to add sku field.",
     long_description=long_description,
     # Get more strings from

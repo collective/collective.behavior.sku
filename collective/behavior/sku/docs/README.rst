@@ -2,7 +2,7 @@
 collective.behavior.sku
 =======================
 
-collective.behavior.sku provides behavior to switch dexterity content types sku and not.
+collective.behavior.sku provides behavior add SKU field to dexterity content types.
 
 Currently tested with
 ---------------------
