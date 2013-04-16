@@ -1,6 +1,6 @@
 from collective.behavior.sku import _
-from zope import schema
 from plone.supermodel.model import Schema
+from zope import schema
 
 
 class ISKU(Schema):
