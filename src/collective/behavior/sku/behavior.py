@@ -1,15 +1,15 @@
 from collective.behavior.sku.interfaces import ISKU
-from plone.directives import form
+from plone.autoform.interfaces import IFormFieldProvider
 from zope.interface import alsoProvides
 from zope.interface import implements
 
 
-alsoProvides(ISKU, form.IFormFieldProvider)
+alsoProvides(ISKU, IFormFieldProvider)
 
 
 class SKU(object):
-    """
-    """
+    """Behavior to add sku field to content types"""
+
     implements(ISKU)
 
     def __init__(self, context):
