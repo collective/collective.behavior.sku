@@ -8,7 +8,7 @@ alsoProvides(ISKU, IFormFieldProvider)
 
 
 class SKU(object):
-    """Behavior to add sku field to content types"""
+    """Behavior: SKU"""
 
     implements(ISKU)
 
