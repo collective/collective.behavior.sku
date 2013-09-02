@@ -16,7 +16,7 @@ Giving SKU should be alright::
     >>> browser.getControl(name="form.buttons.save").click()
     >>> print browser.bycss('#form-widgets-ISKU-sku')
     --- 1 ---
-    <span id="form-widgets-ISKU-sku" class="text-widget required textline-field">SKU1</span>
+    <span id="form-widgets-ISKU-sku" class="text-widget textline-field">SKU1</span>
 
 Edit Folder1 with the same SKU::
 
@@ -42,4 +42,4 @@ Giving different SKU should be alright::
     >>> browser.getControl(name="form.buttons.save").click()
     >>> print browser.bycss('#form-widgets-ISKU-sku')
     --- 1 ---
-    <span id="form-widgets-ISKU-sku" class="text-widget required textline-field">SKU2</span>
+    <span id="form-widgets-ISKU-sku" class="text-widget textline-field">SKU2</span>
