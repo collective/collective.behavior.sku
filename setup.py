@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='collective.behavior.sku',
-    version='0.2.0.2',
+    version='0.2.0.3',
     description="Behavior to add sku field.",
     long_description=long_description,
     classifiers=[
