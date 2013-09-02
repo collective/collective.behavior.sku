@@ -7,7 +7,7 @@ collective.behavior.sku provides behavior add SKU field to dexterity content typ
 Currently tested with
 ---------------------
 
-* Plone-4.3 with Python-2.7.x [taito]
+* Plone-4.3.1 with Python-2.7.x [taito]
 
 Behavior
 --------
