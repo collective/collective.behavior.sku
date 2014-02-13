@@ -19,4 +19,6 @@
     title="collective.behavior.sku: Add Folder"
     />
 
+  <adapter factory=".validator.ValidateSKUUniqueness" />
+
 </configure>

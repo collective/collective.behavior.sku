@@ -1,6 +1,12 @@
 Changelog
 ---------
 
+0.4 (2014-02-13)
+================
+
+- Update to bootstrap2. [taito]
+- Move SKU validator to tests. [taito]
+
 0.3 (2013-10-28)
 ================
 

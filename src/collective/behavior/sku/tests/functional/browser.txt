@@ -43,3 +43,13 @@ Giving different SKU should be alright::
     >>> print browser.bycss('#form-widgets-ISKU-sku')
     --- 1 ---
     <span id="form-widgets-ISKU-sku" class="text-widget textline-field">SKU2</span>
+
+Giving existing SKU should be rejected::
+
+    >>> browser.open('/folder2/edit')
+    >>> browser.getControl(name="form.widgets.ISKU.sku").value = 'SKU1'
+    >>> browser.getControl(name="form.buttons.save").click()
+    >>> browser.url
+    'http://nohost/plone/folder2/@@edit'
+    >>> 'The SKU is already in use.' in browser.contents
+    True

@@ -16,8 +16,6 @@
     title="collective.behavior.sku"
     />
 
-  <adapter factory=".validator.ValidateSKUUniqueness" />
-
   <plone:behavior
     description="Adds sku field."
     factory=".behavior.SKU"
